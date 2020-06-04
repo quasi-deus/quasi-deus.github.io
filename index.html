@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <script type="text/javascript" src= "DLTP JS.js"></script>
+        <script type="text/javascript" src="Picture Filter.js"></script>
+        <link rel="stylesheet" type="text/css" href="Picture Filter.css">
+    </head>
+    </script>
+    <body>
+        <div id="dropdown">
+            <button>Filters</button>
+        <div id="content">
+            <input type="button" value="Grayscale" onclick="Gray()"><br>
+            <input type="button" value="Red Filter" onclick="Red()"><br>
+            <input type="button" value="Blur" onclick="disorder()"><br>
+            <input type="button" value="Rainbow" onclick="rainbow()"><br>
+            <input type="button" value="Invert" onclick="invert()"><br>
+            <input type="button" value="Sepia" onclick="sepia()"><br>
+            <input type="button" value="Horizontal Flip" onclick="hmirror()"><br>
+            <input type="button" value="Vertical Flip" onclick="vmirror()"><br>
+            <input type="button" value="Horizontal and Vertical Flip" onclick="absmirror()"><br>
+        </div>
+        </div>
+     <div id="canv">
+     <canvas id="white"> </canvas>
+     <p style="font-size: large; text-align: center; color:white; font-family:Comic Sans MS, Comic Sans, cursive">Image</p>
+     <input style="float:left;" type="file" id="in" multiple= "false"  accept=image/* onchange="upload()">
+     <input style="float:right;" type="button" value="Reset" onclick="reset()">
+    </div>
+    </body>
+</html>
+<!--onclick only uploads the image.
+onchange uploads and displays the image.-->
