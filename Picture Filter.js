@@ -160,7 +160,29 @@ function hueVGBGYOR()
     //similarly for each color in the rainbow
     /* Algorithm for mixed colors is nothing but having a conditional statment until one of rgb reaches maximum
     as the other two primary colors compensate to the brightness with their own corresponding values(ratio) of the 
-    hue colors(or its 50%), with the else statement(s) having the reminder of the color.*/
+    hue colors(or its 50%), with the else statement(s) having the reminder of the color.
+    Actual Algorithm:How to make a filter in any color
+    The values in the table were determined by plotting a piecewise linear function for each of the R, G, and B
+    values vs. the average value. To keep black pixels black and white pixels white, the desired functions are 
+    pinned at (0,0) and (255,255). The third point (where the function changes slope) is determined by plotting 
+    the R, G, or B value of the desired color vs. 127.5. Consider any color any color with R value = Rc, 
+    G value = Gc, and B value = Bc. The filtered pixel has R value:
+        R	= Rc/127.5*avg                      for avg < 128
+        (2 - Rc/127.5)*avg + 2*Rc - 255   for avg >=128
+    Similarly for G and B, where you would substitute Gc or Bc for Rc in the above formula.To apply this 
+    formula and create a colored filter of your choice, use a color picker tool to determine the RGB content 
+    of  any color you would like to use, such as teal (17,170,153).
+    Since for teal, Rc = 17, Gc = 170, Bc = 153, so
+    R = 17/127.5*avg                      = 0.13*avg        for avg < 128
+        (2 - 17/127.5)*avg + 2*17 - 255	  = 1.87*avg - 221  for avg >=128
+    G = 170/127.5*avg                     = 1.33*avg        for avg < 128
+        (2 - 170/127.5)*avg + 2*170 - 255	= 0.67*avg + 85   for avg >=128
+
+    B = 153/127.5*avg                     = 1.2*avg         for avg < 128
+        (2 - 153/127.5)*avg + 2*153 - 255	= 0.8*avg + 51    for avg >=128
+
+    Now you can use this formula to make a filter in any color!*/
+    
     var height=rb.getHeight();
     for (var pixel of rb.values()) 
     {
