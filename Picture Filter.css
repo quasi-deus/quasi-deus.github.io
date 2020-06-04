@@ -1,24 +1,78 @@
 body
 {
-    background-color:rgba(128,128, 0, 0.555);
+    /* background-color:rgba(146, 202, 81, 0.788); */
+    background-image: url(space.jpg);
+    background-repeat: no-repeat;
+    background-size: 1600px 700px ;
 }
 canvas
 {
     border-style:dotted;
-    border-width: 0.5px;
+    border-width: 0.75px;
+    border-width:3px;
     height: 325px;
     width: 325px;
-    border-color:rgba(121, 0, 0, 0.37) ;
+    border-color:rgba(219, 182, 182, 0.37);
     display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 15px;
+    margin-left:auto;
+    margin-right:auto;
+    float:center;
 }
-#d
+#canv
 {
-    background-color: rgba(184, 219, 145, 0.788);
-    color: #420404;
-    outline: solid;
-    outline-color:black;
-    padding: 1px;
+    margin-top:15px;
+    margin-left:auto;
+    margin-right:auto;
+    float:center;
+    height: 325px;
+    width: 325px;
 }
+#dropdown
+{
+    margin:5px 200px;
+}
+#content
+{
+    display:none;
+    position:absolute;
+    width:20%;
+    background-color:rgba(184, 219, 145, 0.788);
+    z-index:1; /* preference to display */
+}
+#content input[type=button]
+{
+    width: 100%;
+    background-color:rgb(184, 184, 184);
+    border:solid rgb(0,25,0) 0.15px;
+    color:black ;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size:16px;
+    font-weight: bold;
+    padding:15px 20px;
+}
+button
+{
+    width:16%;
+    border-style: solid 0.025;
+    border-radius:6px;
+    background-color: rgba(6, 253, 191, 0.8);
+    color: rgb(61, 21, 29);
+    font-family: 'Cambria', Cochin, Georgia, Times, Times New Roman, serif;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px 5px;
+}
+#white
+{
+    text-align:center;
+}
+#dropdown:hover #content
+{
+    display:block;
+}
+#content input:hover 
+{
+    background-color: aquamarine;
+}
+
+
