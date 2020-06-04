@@ -1,5 +1,3 @@
-# Quasi-Deus.github.io
-Image Presets-Using Javascript
 <html>
     <head>
         <script type="text/javascript" src= "DLTP JS.js"></script>
@@ -8,36 +6,26 @@ Image Presets-Using Javascript
     </head>
     </script>
     <body>
-        <div id=d>
-        <canvas id="white"></canvas>
-        <p style="text-align: center; padding-left:60px">
-            <b>Image</b>
-            <input type="file" id="in" multiple= "false"  accept=image/* onchange="upload()";>
-        </p>
-        <p style="padding-left: 6px;"><b>Filters</b></p>
-        <table>
-            <tr>
-               <td> <input type="button" value="Grayscale" onclick="Gray()"></td>
-               <td><input type="button" value="Invert" onclick="invert()"></td>
-            </tr>
-            <tr>
-                <td><input type="button" value="Red Filter" onclick="Red()"></td>
-                <td><input type="button" value="Sepia" onclick="sepia()"></td>
-            </tr>
-            <tr>
-                <td><input type="button" value="Blur" onclick="disorder()"></td>
-                <td><input type="button" value="Horizontal Flip" onclick="hmirror()"></td>
-            </tr>
-            <tr>
-               <td> <input type="button" value="Rainbow" onclick="rainbow()"></td>
-               <td><input type="button" value="Vertical Flip" onclick="vmirror()"></td>
-            </tr>
-            <tr>
-                <td><input type="button" value="Reset" onclick="reset()"></td>
-                <td><input type="button" value="Horizontal and Vertical Flip" onclick="absmirror()"></td>
-         </tr>
-        </table>
+        <div id="dropdown">
+            <button>Filters</button>
+        <div id="content">
+            <input type="button" value="Grayscale" onclick="Gray()"><br>
+            <input type="button" value="Red Filter" onclick="Red()"><br>
+            <input type="button" value="Blur" onclick="disorder()"><br>
+            <input type="button" value="Rainbow" onclick="rainbow()"><br>
+            <input type="button" value="Invert" onclick="invert()"><br>
+            <input type="button" value="Sepia" onclick="sepia()"><br>
+            <input type="button" value="Horizontal Flip" onclick="hmirror()"><br>
+            <input type="button" value="Vertical Flip" onclick="vmirror()"><br>
+            <input type="button" value="Horizontal and Vertical Flip" onclick="absmirror()"><br>
         </div>
+        </div>
+     <div id="canv">
+     <canvas id="white"> </canvas>
+     <p style="font-size: large; text-align: center; color:white; font-family:Comic Sans MS, Comic Sans, cursive">Image</p>
+     <input style="float:left;" type="file" id="in" multiple= "false"  accept=image/* onchange="upload()">
+     <input style="float:right;" type="button" value="Reset" onclick="reset()">
+    </div>
     </body>
 </html>
 <!--onclick only uploads the image.
