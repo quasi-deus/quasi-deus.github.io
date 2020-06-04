@@ -1,0 +1,24 @@
+body
+{
+    background-color:rgba(128,128, 0, 0.555);
+}
+canvas
+{
+    border-style:dotted;
+    border-width: 0.5px;
+    height: 325px;
+    width: 325px;
+    border-color:rgba(121, 0, 0, 0.37) ;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+}
+#d
+{
+    background-color: rgba(184, 219, 145, 0.788);
+    color: #420404;
+    outline: solid;
+    outline-color:black;
+    padding: 1px;
+}
