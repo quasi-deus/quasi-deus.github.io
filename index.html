@@ -1,14 +1,35 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Greetings!</title>
-    <!-- linking to PyScript assets -->
-    <link rel="stylesheet" href="https://pyscript.net/releases/2022.12.1/pyscript.css" />
-    <script defer src="https://pyscript.net/releases/2022.12.1/pyscript.js"></script>
-  </head>
-  <body>
-       <py-script>display("Hello World!")</py-script>
-  </body>
+<html>
+    <head>
+        <script type="text/javascript" src= "DLTP JS.js"></script>
+        <script type="text/javascript" src="Picture Filter.js"></script>
+        <link rel="stylesheet" type="text/css" href="Picture Filter.css">
+            <h1 style="text-align: center;font-family:Luminari,fantasy;font-weight:200;">Image Presets</h1>
+        </head>
+    </script>
+    <body>
+        <div id="dropdown">
+            <button>Filters</button>
+        <div id="content">
+            <input type="button" value="Grayscale" onclick="Gray()"><br>
+            <input type="button" value="Red Filter" onclick="Red()"><br>
+            <input type="button" value="Blur" onclick="disorder()"><br>
+            <input type="button" value="Rainbow" onclick="rainbow()"><br>
+            <input type="button" value="Invert" onclick="invert()"><br>
+            <input type="button" value="Sepia" onclick="sepia()"><br>
+            <input type="button" value="Horizontal Flip" onclick="hmirror()"><br>
+            <input type="button" value="Vertical Flip" onclick="vmirror()"><br>
+            <input type="button" value="Horizontal and Vertical Flip" onclick="absmirror()"><br>
+        </div>
+        </div>
+     <div id="canv">
+     <canvas id="white"> </canvas>
+     <p style="font-size: large; text-align: center; color:white; font-family:Comic Sans MS, Comic Sans, cursive">Image</p>
+     <input style="float:left;" type="file" id="in" multiple= "false"  accept=image/* onchange="upload()">
+     <input style="float:right;" type="button" value="Reset" onclick="reset()">
+    </div>
+    </body>        
+    <h4 style="float:right; color: rgb(167, 167, 167,0.25);font-family: Luminari,fantasy"> By Quasi Deus(Suryaa)</h4>
+    <h5 style="float:left; color: rgb(167, 167, 167,0.25);font-family: Luminari,fantasy">Only Javascript was used to implement the filters.CSS was not used for the same</h3>
 </html>
+<!--onclick only uploads the image.
+onchange uploads and displays the image.-->
